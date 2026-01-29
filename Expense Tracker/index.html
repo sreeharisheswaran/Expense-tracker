@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>Expense <span> Tracker</span></h1>
+
+      <div class="balance-card">
+        <small>Available Balance</small>
+        <h2 id="total-balance">₹0.00</h2>
+      </div>
+    </header>
+
+    <section class="card input-section">
+      <h3>Add Transaction</h3>
+
+      <input type="text" id="desc" placeholder="What did you buy?" />
+      <input type="number" id="amount" placeholder="Amount (use - for expense)" />
+
+      <div class="row">
+        <select id="category">
+          <option value="General">General</option>
+          <option value="Food">Food 🍔</option>
+          <option value="Salary">Salary 💰</option>
+          <option value="Shopping">Shopping 🛍️</option>
+          <option value="Bills">Bills 📑</option>
+        </select>
+        <button id="add-btn">Add Record</button>
+      </div>
+    </section>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="income">Income</button>
+      <button class="filter-btn" data-filter="expense">Expenses</button>
+    </div>
+
+    <section class="history-section">
+      <ul id="transaction-list"></ul>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
